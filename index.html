@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <title>Financial Translation Services - BabelBond</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
     <meta name="description" content="High-quality financial translations" />
     <meta property="og:title" content="BabelBond" />
     <meta property="og:url" content="https://babelbond.com" />
     <meta property="og:description" content="High-quality financial translations" />
-    <meta property="og:image" content="https://babelbond.com/logo-white-purple-background.png" />
+    <meta property="og:image" content="https://babelbond.com/img/logo-white-purple-background.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +30,12 @@
         font-style: normal;
       }
 
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
       .roboto-bold {
         font-family: "Roboto", sans-serif;
         font-weight: 700;
@@ -43,81 +49,88 @@
         overflow-x: hidden;
       }
 
-      body {
-        background-color: #7F3A98;
-        user-select: none;
+      #logoMobile {
+        width: 100%;
+        max-width: 250px;
       }
 
-      .header {
-        transition-property: top;
-        transition-duration: 3s;
+      #logoDesktop {
+        width: 100%;
+        max-width: 300px;
       }
 
-      #logo {
-        width: 120px;
+      #openMenuIcon {
+        max-height: 35px;
+        max-width: 35px;
       }
 
-      #companyName {
-        width: 320px;
+      #closeMenuIcon {
+        max-height: 35px;
+        max-width: 35px;
+      }
+      
+      #earth {
+        background-image: url(/img/earth2.gif);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        mix-blend-mode: difference;
       }
 
-      .text {
-        color: white;
-        font-size: 16px;
-        text-align: center;
+      h1 {
+        font-size: 36px;
       }
 
-      .contact-text {
-        color: white;
-        font-size: 16px;
+      /* Larger font for longer phones */
+      @media only screen
+        and (max-width: 576px)
+        and (min-height: 900px) {
+          h1 {
+            font-size: 40px;
+          }
       }
 
-      .submitted-text {
-        color: white;
-        font-size: 16px;
-        text-align: center;
+      @media (min-width: 576px) {
+          h1 {
+            font-size: 40px;
+          }
       }
 
-      .contact-header-text {
-        color: white;
-        font-size: 18px;
+      h2 {
+        font-size: 40px;
       }
 
-      .contact-button-text {
-        color: white;
-        font-size: 14px;
+      h3 {
+        font-size: 32px; 
       }
 
-      #contactButton {
-        background-color: #983A72;
-        height: 50px;
-        border-radius: 8px;
-        cursor: pointer;
-        text-decoration: none;
+      h4 {
+        font-size: 26px;
       }
 
-      #homeButton {
-        height: 50px;
-        border-radius: 8px;
-        cursor: pointer;
-        text-decoration: underline;
-        text-decoration-color: white;
-      }
-
-      #exitButton {
-        cursor: pointer;
-      }
-
-      #exitIcon {
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.1);
+      h5 {
         font-size: 20px;
       }
 
-      #footerText {
-        color: rgba(255, 255, 255, 0.2);
-        text-align: center;
-        font-size: 6px;
+      p, .text {
+        font-size: 18px;
+      }
+
+      .text-small {
+        font-size: 12px;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .divider-mobile {
+        max-width: 100%;
+      }
+
+      .divider-desktop {
+        max-width: 30%;
       }
 
       .fade-in {
@@ -140,269 +153,978 @@
         100% { opacity: 0; }
       }
 
-      .contact-input {
-        border-radius: 8px;
-        border-width: 0px;
-        outline: none;
-      }
-
-      #sendButton {
-        height: 40px;
-        background-color: #983A72;
-        border: none;
+      #contactButton {
+        background-color: #94408E;
+        height: 50px;
         border-radius: 8px;
         cursor: pointer;
         text-decoration: none;
+        color: white;
       }
 
-      /* Bootstrap MD */
-      @media (min-width: 768px) {
-        #logo {
-          width: 110px;
-        }
+      #header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 100px;
+      }
 
-        #companyName {
-          width: 450px;
-        }
+      #main {
+        min-height: calc(100svh - 100px);
+      }
 
-        .text {
-          font-size: 22px;
-        }
+      #menu {
+        z-index: 1;
+        min-height: calc(100svh - 100px);
+        background-color: #FFFFFF;
+      }
 
-        #contactButton {
-          height: 60px;
-        }
+      .menu-chevron {
+        width: 35px;
+      }
 
-        #footerText {
-          font-size: 10px;
+      .menu-language {
+        width: 60px;
+      }
+
+      @media (max-width: 576px) {
+        #hero {
+          min-height: calc(100svh - 100px);
         }
+      }
+
+      #ourMission {
+        background-color: #F3F3F3;
+        width: 100%;
+      }
+
+      @media (max-width: 576px) {
+        #ourMission {
+          min-height: 100lvh;
+        }
+      }
+
+      #arms {
+        background-image: url(/img/arms.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      @media (max-width: 576px) {
+        #services {
+          min-height: 100lvh;
+        }
+      }
+
+      #ourServicesTop {
+        height: 400px;
+        background-image: url(/img/our-services-top.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+
+      #ourServicesBottom {
+        height: 400px;
+        background-image: url(/img/our-services-bottom.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left;
+      }
+
+      #ourEdge {
+        background-color: #F3F3F3;
+        width: 100%;
+      }
+
+      @media (max-width: 576px) {
+        #ourEdge {
+          min-height: 100lvh;
+        }
+      }
+
+      .our-edge-image {
+        max-width: 300px;
+        max-height: 100%;
+      }
+
+      @media (min-width: 576px) {
+        .our-edge-image {
+          max-width: 100%;
+          max-height: 200px;
+        }
+      }
+
+      #contact {
+        background-color: #FFFFFF;
+        width: 100%;
+      }
+
+      @media (max-width: 576px) {
+        #contact {
+          min-height: 100lvh;
+        }
+      }
+
+      .contact-input {
+        border: 1px solid rgba(81, 81, 81, 0.5);
+        border-radius: 8px;
+      }
+
+      .send-button {
+        background-color: #94408E;
+        height: 54px;
+        border-width: 0px;
+        border-radius: 8px;
+        color: white;
+        font-size: 20px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+
+      #contactLogo {
+        height: 400px;
+        background-image: url(/img/contact-us.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+
+      #footerContainer {
+        background-color: #000;
+      }
+
+      .linkedin-footer-icon {
+        width: 35px;
+        mix-blend-mode: difference;
+        border-radius: 4px;
+      }
+
+      .footer-text {
+        color: #fff;
+        font-size: 12px;
+      }
+
+      .submitted-text {
+        font-size: 16px;
+      }
+
+      .subheader {
+        color: #535252;
       }
     </style>
 
     <script>
-        function showContactPage() {
-          const homeContent = document.getElementById('homeContent');
-          const contactPage = document.getElementById('contactPage');
-
-          const width = homeContent.offsetWidth;
-          const height = homeContent.offsetHeight;
-          homeContent.classList.add('fade-out');
-
-          setTimeout(() => {
-            contactPage.classList.remove('d-none', 'fade-out');
-            contactPage.classList.add('fade-in');
-            //contactPage.style.width = `${width}px`;
-            //contactPage.style.height = `${height}px`;
-            homeContent.classList.add('d-none');
-          }, 500);
-
-          logEvent(analytics, 'contact_clicked');
+      function openMenu() {
+        const menu = document.getElementById("menu");
+        if (menu.dataset.open === "true" || menu.dataset.midAnimation === "true") {
+          return false;
         }
 
-        function showSubmittedForm() {
-          const contactPage = document.getElementById('contactPage');
-          const submittedForm = document.getElementById('submittedForm');
+        window.scrollTo({top: 0, left: 0, behavior: "smooth"});
 
-          contactPage.classList.add('fade-out');
+        menu.dataset.open = "true";
+        menu.dataset.midAnimation = "true";
+        menu.classList.remove('d-none', 'fade-out');
+        menu.classList.add('fade-in');
 
-          setTimeout(() => {
-            submittedForm.classList.remove('d-none', 'fade-out');
-            submittedForm.classList.add('fade-in');
-            contactPage.classList.add('d-none');
+        const openMenuButton = document.getElementById("openMenuButton");
+        openMenuButton.classList.add('d-none');
 
-            const contactForm = document.getElementById("contactForm");
-            contactForm.reset();
-            contactForm.disabled = false;
-          }, 500);
+        const closeMenuButton = document.getElementById("closeMenuButton");
+        closeMenuButton.classList.remove('d-none');
 
-          logEvent(analytics, 'contact_submitted');
+        const allSections = Array.from(document.querySelectorAll("#sections > div"));
+        const allSectionsExceptHero = allSections.slice(1);
+        for (const section of allSectionsExceptHero) {
+          section.classList.add('d-none');
         }
 
-        function showHome() {
-          const contactPage = document.getElementById('contactPage');
-          const homeContent = document.getElementById('homeContent');
-          const submittedForm = document.getElementById('submittedForm');
+        setTimeout(() => {
+          const heroSection = document.querySelector("#sections > div:first-of-type");
+          heroSection.classList.add('d-none');
+          menu.dataset.midAnimation = "false";
+        }, 500);
 
-          contactPage.classList.add('fade-out');
-          submittedForm.classList.add('fade-out');
+        return true;
+      }
 
-          setTimeout(() => {
-            homeContent.classList.remove('d-none', 'fade-out');
-            homeContent.classList.add('fade-in');
-            contactPage.classList.add('d-none');
-            submittedForm.classList.add('d-none');
-          }, 500);
-
-          logEvent(analytics, 'back_to_home_clicked');
+      function closeMenu() {
+        const menu = document.getElementById("menu");
+        if (menu.dataset.open === "false" || menu.dataset.midAnimation === "true") {
+          return false;
         }
 
-        async function submitForm() {
-          const contactForm = document.getElementById("contactForm");
-          if (contactForm.disabled) {
-            return;
-          }
-          contactForm.disabled = true;
+        window.scrollTo({top: 0, left: 0, behavior: "smooth"});
 
-          const email = document.getElementById("emailField").value;
-          const message = document.getElementById("messageField").value;
-          const result = await sendContactEmail(email, message);
+        menu.dataset.open = "false";
+        menu.dataset.midAnimation = "true";
+        menu.classList.remove('fade-in');
+        menu.classList.add('fade-out');
+
+        const closeMenuButton = document.getElementById("closeMenuButton");
+        closeMenuButton.classList.add('d-none');
+
+        const openMenuButton = document.getElementById("openMenuButton");
+        openMenuButton.classList.remove('d-none');
+
+        const allSections = document.querySelectorAll("#sections > div");
+        for (const section of allSections) {
+          section.classList.remove('d-none');
+        }
+
+        setTimeout(() => {
+          menu.classList.add('d-none');
+          menu.dataset.midAnimation = "false";
+        }, 500);
+
+        return true;
+      }
+
+      function closeMenuToViewSection() {
+        const menu = document.getElementById("menu");
+        if (menu.classList.contains('d-none')) {
+          return true;
+        }
+        if (menu.dataset.open === "false" || menu.dataset.midAnimation === "true") {
+          return false;
+        }
+
+        menu.classList.add('d-none');
+        menu.dataset.open = "false";
+        menu.dataset.midAnimation = "false";
+
+        const closeMenuButton = document.getElementById("closeMenuButton");
+        closeMenuButton.classList.add('d-none');
+
+        const openMenuButton = document.getElementById("openMenuButton");
+        openMenuButton.classList.remove('d-none');
+
+        const allSections = document.querySelectorAll("#sections > div");
+        for (const section of allSections) {
+          section.classList.remove('d-none');
+        }
+
+        return true;
+      }
+
+      function scrollToContact() {
+        const contact = document.getElementById("contact");
+        contact.scrollIntoView({behavior: "smooth"});
+      }
+
+      function openAboutSection() {
+        if (!closeMenuToViewSection()) { return; }
+        const ourMission = document.getElementById("ourMission");
+        ourMission.scrollIntoView({behavior: "smooth"});
+      }
+
+      function openServicesSection() {
+        if (!closeMenuToViewSection()) { return; }
+        const services = document.getElementById("services");
+        services.scrollIntoView({behavior: "smooth"});
+      }
+
+      function openOurEdgeSection() {
+        if (!closeMenuToViewSection()) { return; }
+        const ourEdge = document.getElementById("ourEdge");
+        ourEdge.scrollIntoView({behavior: "smooth"});
+      }
+
+      function openContactSection() {
+        if (!closeMenuToViewSection()) { return; }
+        const contact = document.getElementById("contact");
+        contact.scrollIntoView({behavior: "smooth"});
+      }
+
+      function showSubmittedForm(rootElement) {
+        const contactForm = rootElement.querySelector('#contactForm');
+        const submittedForm = rootElement.querySelector('#submittedForm');
+
+        contactForm.classList.add('fade-out');
+
+        setTimeout(() => {
+          submittedForm.classList.remove('d-none', 'fade-out');
+          submittedForm.classList.add('fade-in');
+          //contactForm.classList.add('d-none');
+
+          contactForm.reset();
+          contactForm.disabled = false;
+        }, 500);
+
+        logEvent(analytics, 'contact_submitted');
+      }
+
+      async function submitForm(rootElementId) {
+        const rootElement = document.getElementById(rootElementId);
+
+        const contactForm = rootElement.querySelector("#contactForm");
+        if (contactForm.disabled) {
+          return;
+        }
+        contactForm.disabled = true;
+
+        const emailField = rootElement.querySelector("#emailField");
+        const email = emailField.value;
+        emailField.disabled = true;
+
+        const messageField = rootElement.querySelector("#messageField");
+        const message = messageField.value;
+        messageField.disabled = true;
+
+        const sendButton = rootElement.querySelector("#sendButton");
+        sendButton.classList.add("d-none");
+
+        const sendingButton = rootElement.querySelector("#sendingButton");
+        sendingButton.classList.remove("d-none");
+
+        let result = null;
+        try {
+          result = await sendContactEmail(email, message);
+        } finally {
           if (!result) {
             contactForm.disabled = false;
+            emailField.disabled = false;
+            messageField.disabled = false;
+            sendButton.classList.remove("d-none");
+            sendingButton.classList.add("d-none");
+            alert("We were unable to send your message, please try again.");
           } else {
-            showSubmittedForm();
+            showSubmittedForm(rootElement);
           }
         }
+      }
     </script>
-  </head>
-  <body class="h-100">
-    <div class="container h-100">
-      <div class="row justify-content-center align-items-center h-100">
-        <div class="col">
 
-          <div id="main">
-            <div id="homeContent">
-              <!-- Desktop header -->
-              <div class="header d-none d-md-flex row justify-content-center align-items-center">      
-                <div class="col overflow-hidden">
-                  <div class="row justify-content-center align-items-center mt-5">
-                    <img id="logo" src="logo-white.png" alt="Logo" />
-                    <img id="companyName" src="text-only.png" alt="BabelBond" />
+    <body>
+      <div id="header">
+        <!-- Desktop -->
+        <div class="d-none d-lg-block roboto-light" style="position: absolute; top: 10px; right: 10px; font-size: 10pt">
+          <a href="/" class="roboto-medium">EN</a>
+          <span> / </span>
+          <a href="/fr">FR</a>
+        </div>
+
+        <div class="container">
+          <!-- Mobile -->
+          <div class="d-lg-none row">
+            <div class="col-9">
+              <div class="d-flex h-100 align-items-center justify-content-start">
+                <div role="button">
+                  <img id="logoMobile" src="/img/logo-with-black-text.png" alt="BabelBond" />
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="position-relative d-flex h-100 align-items-center justify-content-end" style="padding-bottom: 4px">
+                <div id="openMenuButton" role="button" class="position-absolute" onclick="openMenu()">
+                  <img id="openMenuIcon" src="/img/hamburger.png" alt="Open menu" />
+                </div>
+
+                <div id="closeMenuButton" role="button" class="position-absolute d-none" onclick="closeMenu()">
+                  <img id="closeMenuIcon" src="/img/exit.png" alt="Close menu" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop -->
+          <div class="d-none d-lg-flex row px-lg-5">
+            <div class="col-5">
+              <div class="d-flex h-100 align-items-center justify-content-start">
+                <a role="button" href="">
+                  <img id="logoDesktop" src="/img/logo-with-black-text.png" alt="BabelBond" />
+                </a>
+              </div>
+            </div>
+            <div class="col-6 offset-1 col-xxl-4 offset-xxl-2">
+              <div class="row text-nowrap h-100 align-items-center user-select-none">
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openAboutSection()">About</h5>
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openServicesSection()">Services</h5>
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openOurEdgeSection()">Our edge</h5>
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openContactSection()">Contact</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main" class="position-relative">
+        <!-- Hamburger menu -->
+        <div id="menu" class="position-absolute top-0 w-100 d-none align-items-center">
+          <div id="menuItems">
+            <div class="container">
+              <div class="ps-2 my-3">
+                <div class="position-relative" role="button" onclick="openAboutSection()">
+                  <p class="roboto-regular pt-3 pb-3">About</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative" role="button" onclick="openServicesSection()">
+                  <p class="roboto-regular pt-3 pb-3">Services</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative" role="button" onclick="openOurEdgeSection()">
+                  <p class="roboto-regular pt-3 pb-3">Our edge</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative" role="button" onclick="openContactSection()">
+                  <p class="roboto-regular pt-3 pb-3">Get in touch</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative">
+                  <p class="roboto-regular pt-3 pb-3">Language</p>
+                  <div class="menu-language pt-3 top-0 end-0 position-absolute roboto-light">
+                    <a href="/" class="roboto-medium">EN</a>
+                    <span> / </span>
+                    <a href="/fr">FR</a>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div id="menuFooter" class="d-md-none position-absolute bottom-0 text-center px-4 w-100">
+            <a href="https://www.linkedin.com/company/babelbond/">
+              <img src="/img/linkedin-black-box.png" alt="LinkedIn" style="width: 30px; border-radius: 4px" />
+            </a>
+            <p class="text-small roboto-regular pt-2">BabelBond Limited is a company registered in England and Wales with company number 15395988. Copyright © 2024 BabelBond, Ltd. All Rights Reserved.</p>
+          </div>
+        </div>
 
-              <!-- Mobile header -->
-              <div class="header d-flex d-md-none row justify-content-center mt-5">
-                <img id="companyName" src="text-only.png" alt="Logo" />
-              </div>
-              <div class="d-flex d-md-none row justify-content-center mt-5">
-                <img id="logo" src="logo-white.png" alt="BabelBond" />
-              </div>
+        <div id="sections" class="position-absolute top-0 w-100">
+          <div id="hero" class="d-flex">
+            <!-- Mobile -->
+            <div class="d-flex d-sm-none flex-grow-1 container">
+              <div class="d-flex flex-column flex-grow-1 justify-content-center align-items-center">
+                <h1 class="col-11 roboto-bold text-center pt-2">AI-powered translations for financial services</h1>
 
-              <div class="row my-4 justify-content-center align-items-center">
-                <div class="col-12">
-                  <p class="text mx-4 my-3 roboto-bold">BabelBond is a language service<br class="d-flex d-md-none"/>  provider tailored to finance.</p>
-                  <p class="text mx-4 my-3 roboto-regular">We use <span class="roboto-bold">AI</span> to deliver swift<br class="d-flex d-md-none"/>  turnaround times and unwavering<br class="d-flex d-md-none"/>  consistency.</p>
-                  <p class="text mx-4 my-0 roboto-regular">Our expert linguists work in tandem<br class="d-flex d-md-none"/>  with <span class="roboto-bold">industry professionals</span> to add<br/>  a human touch and guarantee<br class="d-flex d-md-none"/>  excellence across all languages.</p>
+                <div class="col-11 d-flex position-relative flex-grow-1 justify-content-center">
+                  <div id="earth" class="h-100 w-100"></div>
+                  <div style="position: absolute; top: 0; background-color: #DECFE0; mix-blend-mode: color;" class="h-100 vw-100"></div>
                 </div>
-              </div>
-              <div class="row justify-content-center align-items-center">
-                <div class="col-8 col-md-3 mb-3">
-                  <a id="contactButton" class="row justify-content-center align-items-center" onclick="showContactPage()">
-                    <p class="text roboto-bold m-0">Get in touch 👋</p>
+
+                <div class="col-11 pb-4">
+                  <h5 class="roboto-regular text-center pb-4">
+                    Communicate with your clients like a local with BabelBond's tailored solutions.
+                  </h5>
+
+                  <a onclick="scrollToContact()">
+                    <div id="contactButton" class="d-flex justify-content-center align-items-center mb-2">
+                      <h5 class="roboto-bold m-0">Get in touch</h5>
+                    </div>
                   </a>
                 </div>
               </div>
+            </div>
 
-              <div class="row justify-content-center align-items-center mt-2">
-                <p id="footerText" class="roboto-regular">BabelBond Ltd is a company registered in England and Wales with company number 15395988.</p>
+            <!-- Desktop -->
+            <div class="d-none d-sm-block container">
+              <div class="row pb-5 px-lg-5">
+                <div class="col-5 d-flex">
+                  <div class="d-flex flex-column justify-content-center">
+                    <h1 class="roboto-bold pb-4">AI-powered translations for financial services</h1>
+                    <p class="roboto-regular">
+                      Communicate with your clients like a local with BabelBond's tailored solutions.
+                    </p>
+                    <p class="roboto-regular pb-4">
+                      Our AI capabilities, industry expertise and intuitive platform ensure accurate and timely translations, so you can focus on everything else.
+                    </p>
+
+                    <a onclick="scrollToContact()" style="width: 70%">
+                      <div id="contactButton" class="d-flex justify-content-center align-items-center mb-2">
+                        <h5 class="roboto-bold m-0 user-select-none">Get in touch</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-6 offset-1">
+                  <div class="d-flex position-relative flex-grow-1 justify-content-center">
+                    <div id="earth" class="h-100 w-100" style="min-height: 550px"></div>
+                    <div style="position: absolute; top: 0; background-color: #DECFE0; mix-blend-mode: color;" class="h-100 w-100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="ourMission" class="d-flex">
+            <!-- Mobile -->
+            <div class="d-sm-none d-flex flex-column container">
+              <div class="row justify-content-center pt-5">
+                <h2 class="roboto-bold col-11">Our mission</h2>
+              </div>
+              <div class="row justify-content-center pt-2">
+                <h3 class="roboto-regular col-11">
+                  <div class="d-inline-block">
+                    Build <span style="color: #7F3A98">bonds</span>
+                  </div>
+                  
+                  <div class="d-inline-block">
+                    beyond <span style="color: #7F3A98">borders</span>
+                  </div>
+                </h3>
+              </div>
+              <div class="row pt-2 pb-3 flex-grow-1">
+                <div id="arms" aria-label="Arms reaching out to each other"></div>
+              </div>
+              <div class="row justify-content-center">
+                <p class="roboto-regular col-11">
+                  We believe in empowering individuals to take control of their financial destiny, and it starts with speaking the same language – quite literally.
+                </p>
+                <p class="roboto-regular col-11">
+                  Together with financial clients, we are on a mission to make capital markets speak to all of us.
+                </p>
+              </div>
+
+              <div class="row justify-content-center pt-3 pb-5">
+                <div class="col-11">
+                  <a onclick="scrollToContact()">
+                    <div id="contactButton" class="d-flex justify-content-center align-items-center">
+                      <h5 class="roboto-bold m-0">Find out more</h5>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div id="contactPage" class="d-none">
-              <div class="row my-4 justify-content-center align-items-center ">
-                <div class="col-12">
-                  <div class="row justify-content-center align-items-center">
-                    <div class="col-10 col-md-5 mb-3">
-                      <div class="row">
-                        <p class="col-11 px-0 m-0 contact-header-text roboto-bold">Contact BabelBond</p>
-                        <a id="exitButton" class="col-1 p-0 m-0 d-flex justify-content-end"  onclick="showHome()">
-                          <ion-icon id="exitIcon" name="return-up-back-outline"></ion-icon>
-                        </a>
-                      </div>
-                      <p class="row contact-text my-3 roboto-regular">Our team is here to help.</p>
-                      <p class="row contact-text my-3 roboto-regular">Please enter your email and we will get back to you.</p>
+            <!-- Desktop -->
+            <div class="d-none d-sm-block container">
+              <div class="row py-5 px-lg-5">
+                <div class="col-6">
+                  <div id="arms" class="h-100" aria-label="Arms reaching out to each other"></div>
+                </div>
+                <div class="col-6">
+                  <h2 class="roboto-bold pb-4">Our mission</h2>
+                  <h3 class="roboto-regular pb-4">
+                    <div class="d-inline-block">
+                      Build <span style="color: #7F3A98">bonds</span>
+                    </div>
+                    
+                    <div class="d-inline-block">
+                      beyond <span style="color: #7F3A98">borders</span>
+                    </div>
+                  </h3>
 
-                      <form id="contactForm" action="javascript:submitForm()">
-                        <div class="row">
-                          <input class="col-12 contact-input roboto-regular w-100 mb-2 p-2 mt-1" type="email" id="emailField" name="email" placeholder="Email" required />
-                        </div>
-                        <div class="row">
-                          <textarea class="col-12 contact-input roboto-regular w-100 mb-2 p-2" type="text" id="messageField" name="email" placeholder="(Optional) How can we help?" style="resize: none"></textarea>
-                        </div>
-                        <div class="row">
-                          <input id="sendButton" class="contact-button-text roboto-bold d-flex col-12 justify-content-center align-items-center mt-2" value="Send" type="submit" />
-                        </form>
-                        <!-- <a id="homeButton" class="d-flex col-12 justify-content-center align-items-center mt-2" onclick="showHome()">
-                          <p class="contact-button-text roboto-bold m-0">Return to home</p>
-                        </a> -->
-                      </div>
+                  <p class="roboto-regular col-11">
+                    We believe in empowering individuals to take control of their financial destiny, and it starts with speaking the same language – quite literally.
+                  </p>
+                  <p class="roboto-regular col-11 pb-4">
+                    Together with financial clients, we are on a mission to make capital markets speak to all of us.
+                  </p>
+                  <a onclick="scrollToContact()">
+                    <div id="contactButton" class="d-flex justify-content-center align-items-center" style="width: 60%">
+                      <h5 class="roboto-bold m-0 user-select-none">Find out more</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div id="services">
+            <!-- Mobile -->
+            <div class="d-sm-none container pb-4">
+              <div class="row justify-content-center pt-5">
+                <div class="col-11">
+                  <h2 class="roboto-bold">Our services</h2>
+                  <div class="roboto-regular text pt-2 subheader">From corporate communications to <span class="d-inline-block">client-facing</span> marketing materials</div>
+                  <div class="py-4">
+                    <img class="divider-mobile" src="/img/divider-mobile.png" alt="Content divider" />
+                  </div>
+
+                  <img class="mt-2" style="width: 50px" src="/img/communications.png" alt="Communications icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Corporate Communications</div>
+                  <div class="roboto-regular text pb-4">
+                    Deliver clear and consistent internal communications across borders, and ensure everyone is on the same page.
+                  </div>
+
+                  <img class="mt-2" style="width: 40px; height: 34px" src="/img/reporting.png" alt="Financial reporting icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Financial Reporting</div>
+                  <div class="roboto-regular text pb-4">
+                    Present financial data to global audiences with confidence. Get precise translations of annual reports and performance updates.
+                  </div>
+
+                  <img class="mt-2" style="width: 42px; height: 42px" src="/img/legal.png" alt="Legal and compliance icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Legal & Compliance</div>
+                  <div class="roboto-regular text pb-4">
+                    Stay compliant, mitigate risk, reduce stress. Seamlessly translate prospectus, policies and disclosures into multiple languages.
+                  </div>
+
+                  <img class="mt-2" style="width: 38px; height: 38px" src="/img/diligence.png" alt="Due diligence icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Due Diligence Materials</div>
+                  <div class="roboto-regular text pb-4">
+                    Make sure that due diligence processes run smoothly with reliable translations - wherever your prospects are.
+                  </div>
+
+                  <img class="mt-2" style="width: 54px; height: 22px" src="/img/investors.png" alt="Marketing and communications icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Marketing & Communications</div>
+                  <div class="roboto-regular text pb-4">
+                    Connect with high-value clients by speaking their language. Translate your marketing materials and give your brand a global voice.
+                  </div>
+
+                  <a onclick="scrollToContact()">
+                    <div id="contactButton" class="d-flex justify-content-center align-items-center my-3">
+                      <h5 class="roboto-bold m-0">Get started</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="d-none d-sm-block container">
+              <div class="row align-items-center justify-content-center pt-5 pb-4 px-lg-5">
+                <h2 class="roboto-bold text-center">Our services</h2>
+                <h5 class="roboto-regular text-center py-3 subheader">From corporate communications to client-facing marketing materials</h5>
+                <img class="divider-desktop pt-3" src="/img/divider-desktop.png" alt="Content divider" />
+              </div>
+              <div class="row px-lg-5 mx-5 align-items-center pb-2 mb-2">
+                <div class="col-6">
+                  <img class="mt-2" style="width: 50px" src="/img/communications.png" alt="Communications icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Corporate Communications</div>
+                  <div class="roboto-regular text pb-4">
+                    Deliver clear and consistent internal communications across borders, and ensure everyone is on the same page.
+                  </div>
+
+                  <img class="mt-2" style="width: 40px; height: 34px" src="/img/reporting.png" alt="Financial reporting icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Financial Reporting</div>
+                  <div class="roboto-regular text pb-4">
+                    Present financial data to global audiences with confidence. Get precise translations of annual reports and performance updates.
+                  </div>
+
+                  <img class="mt-2" style="width: 42px; height: 42px" src="/img/legal.png" alt="Legal and compliance icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Legal & Compliance</div>
+                  <div class="roboto-regular text pb-4">
+                    Stay compliant, mitigate risk, reduce stress. Seamlessly translate prospectus, policies and disclosures into multiple languages.
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div id="ourServicesTop"></div>
+                </div>
+                <div class="col-6 py-5 my-5">
+                  <div id="ourServicesBottom"></div>
+                </div>
+                <div class="col-6">
+                  <img class="mt-2" style="width: 38px; height: 38px" src="/img/diligence.png" alt="Due diligence icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Due Diligence Materials</div>
+                  <div class="roboto-regular text pb-4">
+                    Make sure that due diligence processes run smoothly with reliable translations - wherever your prospects are.
+                  </div>
+
+                  <img class="mt-2" style="width: 54px; height: 22px" src="/img/investors.png" alt="Marketing and communications icon" />
+                  <div class="roboto-bold text pt-2 pb-1">Marketing & Communications</div>
+                  <div class="roboto-regular text pb-4">
+                    Connect with high-value clients by speaking their language. Translate your marketing materials and give your brand a global voice.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="ourEdge">
+            <!-- Mobile -->
+            <div class="d-sm-none container pb-4">
+              <div class="row justify-content-center pt-5">
+                <div class="col-11">
+                  <h2 class="roboto-bold">Our edge</h2>
+                  <div class="roboto-regular text pt-2 subheader">Six defining factors of our process</div>
+                  <div class="py-4">
+                    <img class="divider-mobile" src="/img/divider-mobile.png" alt="Content divider" />
+                  </div>
+
+                  <h4 class="roboto-bold pt-2 pb-3">AI + Humans</h4>
+                  <p class="roboto-regular">
+                    Combine the expertise of native human translators with the
+                    <span style="color: #7F3A98">efficiency of AI</span>
+                    for speedy, dependable translations.
+                  </p>
+                  <div class="d-flex justify-content-center pb-4">
+                    <img class="our-edge-image col-8" src="/img/brain.png" />
+                  </div>
+
+                  <h4 class="roboto-bold pb-3">Specialised knowledge</h4>
+                  <p class="roboto-regular">
+                    We speak your language. Partner with
+                    <span style="color: #7F3A98">experienced financial linguists</span>
+                    who know your industry terminology.
+                  </p>
+                  <div class="d-flex justify-content-center pb-4">
+                    <img class="our-edge-image col-8" src="/img/bank.png" />
+                  </div>
+                  
+                  <h4 class="roboto-bold pb-3">Fast delivery</h4>
+                  <p class="roboto-regular">
+                    You need swift translations, and we deliver them. Complete your
+                    <span style="color: #7F3A98">projects faster</span>
+                    thanks to our cutting-edge AI capabilities.
+                  </p>
+                  <div class="d-flex justify-content-center pb-4">
+                    <img class="our-edge-image col-8" src="/img/man.png" />
+                  </div>
+
+                  <h4 class="roboto-bold pb-3">Client-first experience</h4>
+                  <p class="roboto-regular">
+                    You deserve a better translation experience. Enjoy a
+                    <span style="color: #7F3A98">complimentary trial,</span>
+                    pay-after-delivery invoicing, and ongoing support.
+                  </p>
+                  <div class="d-flex justify-content-center pb-4">
+                    <img class="our-edge-image col-8" src="/img/thumb.png" />
+                  </div>
+
+                  <h4 class="roboto-bold pb-3">Transparent pricing</h4>
+                  <p class="roboto-regular">
+                    No hidden fees or confusing costs. We share
+                    <span style="color: #7F3A98">transparent hourly rates</span>
+                    and clear service agreements, so you can budget with confidence.
+                  </p>
+                  <div class="d-flex justify-content-center pb-4">
+                    <img class="our-edge-image col-8" src="/img/pig.png" />
+                  </div>
+
+                  <h4 class="roboto-bold pb-3">Confidentiality</h4>
+                  <p class="roboto-regular">
+                    Your data, our responsibility. Relax knowing your data is protected by our
+                    <span style="color: #7F3A98">GDPR-compliant infrastructure</span>
+                    and commitment to confidentiality.
+                  </p>
+                  <div class="d-flex justify-content-center pb-4">
+                    <img class="our-edge-image col-8" src="/img/padlock.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="d-none d-sm-block container">
+              <div class="row align-items-center justify-content-center py-5 px-lg-5">
+                <h2 class="roboto-bold text-center pt-3">Our edge</h2>
+                <h5 class="roboto-regular text-center py-3 subheader">Six defining factors of our process</h5>
+                <img class="divider-desktop pt-3 pb-4" src="/img/divider-desktop.png" alt="Content divider" />
+              </div>
+              <div class="row px-lg-5">
+                <div class="col-6 pb-5 mb-5">
+                  <div class="d-flex justify-content-center">
+                    <img class="our-edge-image" src="/img/brain.png" />
+                  </div>
+                  <h4 class="roboto-bold pt-2 pb-1 text-center">AI + Humans</h4>
+                  <p class="roboto-regular text-center mx-5">
+                    Combine the expertise of native human translators with the
+                    <span style="color: #7F3A98">efficiency of AI</span>
+                    for speedy, dependable translations.
+                  </p>
+                </div>
+
+                <div class="col-6 pb-5 mb-5">
+                  <div class="d-flex justify-content-center">
+                    <img class="our-edge-image pb-2 pt-2" src="/img/bank.png" />
+                  </div>
+                  <h4 class="roboto-bold pt-2 pb-1 text-center">Specialised knowledge</h4>
+                  <p class="roboto-regular text-center mx-5">
+                    We speak your language. Partner with
+                    <span style="color: #7F3A98">experienced financial linguists</span>
+                    who know your industry terminology.
+                  </p>
+                </div>
+
+                <div class="col-6 py-4 my-4">
+                  <div class="d-flex justify-content-center">
+                    <img class="our-edge-image pb-2" src="/img/man.png" />
+                  </div>
+                  <h4 class="roboto-bold pt-2 pb-1 text-center">Fast delivery</h4>
+                  <p class="roboto-regular text-center mx-5">
+                    You need swift translations, and we deliver them. Complete your
+                    <span style="color: #7F3A98">projects faster</span>
+                    thanks to our cutting-edge AI capabilities.
+                  </p>
+                </div>
+
+                <div class="col-6 py-4 my-4">
+                  <div class="d-flex justify-content-center">
+                    <img class="our-edge-image" src="/img/thumb.png" />
+                  </div>
+                  <h4 class="roboto-bold pt-2 pb-1 text-center">Client-first experience</h4>
+                  <p class="roboto-regular text-center mx-5">
+                    You deserve a better translation experience. Enjoy a
+                    <span style="color: #7F3A98">complimentary trial,</span>
+                    pay-after-delivery invoicing, and ongoing support.
+                  </p>
+                </div>
+
+                <div class="col-6 py-4 my-4">
+                  <div class="d-flex justify-content-center">
+                    <img class="our-edge-image" src="/img/pig.png" />
+                  </div>
+                  <h4 class="roboto-bold pt-2 pb-1 text-center">Transparent pricing</h4>
+                  <p class="roboto-regular text-center mx-5">
+                    No hidden fees or confusing costs. We share
+                    <span style="color: #7F3A98">transparent hourly rates</span>
+                    and clear service agreements, so you can budget with confidence.
+                  </p>
+                </div>
+
+                <div class="col-6 py-4 my-4 mb-5 pb-5">
+                  <div class="d-flex justify-content-center">
+                    <img class="our-edge-image pb-3" src="/img/padlock.png" />
+                  </div>
+                  <h4 class="roboto-bold pt-2 pb-1 text-center">Confidentiality</h4>
+                  <p class="roboto-regular text-center mx-5">
+                    Your data, our responsibility. Relax knowing your data is protected by our
+                    <span style="color: #7F3A98">GDPR-compliant infrastructure</span>
+                    and commitment to confidentiality.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div id="contact" class="d-flex">
+            <!-- Mobile -->
+            <div id="contactMobile" class="d-sm-none d-flex container pb-3">
+              <div class="row justify-content-center pt-4">
+                <div class="d-flex flex-column col-11">
+                  <div class="d-flex align-items-center">
+                    <h2 class="roboto-bold col-11">Get in touch</h2>
+                    <div class="col-1 d-flex align-items-center justify-content-end">
+                      <a class="d-flex justify-content-end w-100" href="https://www.linkedin.com/company/babelbond/" style="padding-bottom: 8px">
+                        <img src="/img/linkedin-black-box.png" alt="LinkedIn" class="w-100" style="border-radius: 4px; min-width: 34px; max-width: 50px" />
+                      </a>
+                  </div>
+                  </div>
+                  <div class="roboto-regular text pt-2">Our team is here to help. Please enter your email and we will get back to you.</div>
+                  <div class="py-4">
+                    <img class="divider-mobile" src="/img/divider-mobile.png" alt="Content divider" />
+                  </div>
+
+                  <div id="forms" class="position-relative d-flex flex-column flex-grow-1">
+                    <form id="contactForm" class="d-flex flex-column flex-grow-1" action="javascript:submitForm('contactMobile')">
+                      <input class="contact-input roboto-regular w-100 mb-2 p-3 mt-1" type="email" id="emailField" name="email" placeholder="Your email" required />
+
+                      <textarea class="flex-grow-1 contact-input roboto-regular w-100 mb-2 p-3" rows="7" type="text" id="messageField" name="email" placeholder="How can we help?" style="resize: none"></textarea>
+
+                      <input id="sendButton" class="send-button w-100 roboto-regular d-flex justify-content-center align-items-center mt-2 mb-2" value="Send" type="submit" />
+
+                      <button id="sendingButton" class="d-none send-button w-100 d-flex justify-content-center align-items-center mt-2 mb-2" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" style="width: 1.5rem; height: 1.5rem; --bs-spinner-border-width: 0.1rem" role="status" aria-hidden="true"></span>
+                      </button>
+                    </form>
+
+                    <div id="submittedForm" class="d-none position-absolute top-0 w-100">
+                      <p class="mt-3 roboto-bold">Your message has been sent.</p>
+                      <p class="mt-3 roboto-regular">We will be in touch shortly.</p>
+                    </div>
+
+                    <div class="roboto-regular text-small mt-3 subheader">
+                      By sending a message, I acknowledge that I have read and agreed to BabelBond's Privacy Policy.
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div id="submittedForm" class="d-none">
-              <div class="row my-4 justify-content-center align-items-center ">
-                <div class="col-12">
-                  <div class="row justify-content-center align-items-center">
-                    <div class="col-10 col-md-5 mb-3">
-                      <div class="row my-0 justify-content-center align-items-center">
-                        <div class="col-12">
-                          <p class="submitted-text mx-4 my-3 roboto-bold">Your message has been sent.</p>
-                          <p class="submitted-text mx-4 my-0 roboto-regular">We will be in touch shortly.</p>
-                          <a id="homeButton" class="d-flex col-12 justify-content-center align-items-center" onclick="showHome()">
-                            <p class="contact-button-text roboto-bold m-0">Return to home</p>
-                          </a>
-                        </div>
-                      </div>
+            <!-- Desktop -->
+            <div id="contactDesktop" class="d-none d-sm-block container">
+              <div class="row py-5 px-lg-5 mx-4">
+                <div class="col-6">
+                  <h2 class="roboto-bold">Get in touch</h2>
+
+                  <h5 class="roboto-regular py-3">Our team is here to help.</h5>
+                  <h5 class="roboto-regular pb-3">Please enter your email and we will get back to you.</h5>
+
+                  <img class="divider-desktop pt-3 pb-4" src="/img/divider-desktop.png" alt="Content divider" style="max-width: 60%" />
+
+                  <div id="forms" class="position-relative d-flex flex-column flex-grow-1">
+                    <form id="contactForm" class="d-flex flex-column flex-grow-1" action="javascript:submitForm('contactDesktop')">
+                      <input class="contact-input roboto-regular w-100 mb-2 p-3 mt-1" type="email" id="emailField" name="email" placeholder="Your email" required />
+
+                      <textarea class="flex-grow-1 contact-input roboto-regular w-100 mb-2 p-3" rows="4" type="text" id="messageField" name="email" placeholder="How can we help?" style="resize: none"></textarea>
+
+                      <input id="sendButton" class="send-button w-100 roboto-regular d-flex justify-content-center align-items-center mt-2 mb-2" value="Send" type="submit" />
+
+                      <button id="sendingButton" class="d-none send-button w-100 d-flex justify-content-center align-items-center mt-2 mb-2" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" style="width: 1.5rem; height: 1.5rem; --bs-spinner-border-width: 0.1rem" role="status" aria-hidden="true"></span>
+                      </button>
+                    </form>
+
+                    <div id="submittedForm" class="d-none position-absolute top-0 w-100">
+                      <p class="mt-3 roboto-bold">Your message has been sent.</p>
+                      <p class="mt-3 roboto-regular">We will be in touch shortly.</p>
+                    </div>
+
+                    <div class="roboto-regular text-small mt-3 subheader">
+                      By sending a message, I acknowledge that I have read and agreed to BabelBond's Privacy Policy.
                     </div>
                   </div>
+                </div>
+                <div class="col-6">
+                  <div class="row h-100 justify-content-center align-items-center">
+                    <div id="contactLogo"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="footer">
+            <div id="footerContainer" class="d-none d-sm-block">
+              <div class="d-flex justify-content-center">
+                <div class="col-11 d-flex flex-column align-items-center text-center py-4">
+                  <a href="https://www.linkedin.com/company/babelbond/">
+                    <img class="linkedin-footer-icon row mb-3" src="/img/linkedin-white-box.png" />
+                  </a>
+                  <span class="footer-text roboto-regular">
+                    BabelBond Limited is a company registered in England and Wales with company number 15395988. Copyright © 2024 BabelBond, Ltd. All Rights Reserved.
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+        import { doc, getFirestore, setDoc } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
 
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-      import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
-      import { doc, getFirestore, setDoc } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyB1nCM_CqnUo1Jv_9LwikPAZiRLoAg1u7o",
+          authDomain: "libcthorne-dev.firebaseapp.com",
+          projectId: "libcthorne-dev",
+          storageBucket: "libcthorne-dev.appspot.com",
+          messagingSenderId: "827451018314",
+          appId: "1:827451018314:web:39781f8737ac2390326ab3"
+        };
 
-      const firebaseConfig = {
-        apiKey: "AIzaSyB1nCM_CqnUo1Jv_9LwikPAZiRLoAg1u7o",
-        authDomain: "libcthorne-dev.firebaseapp.com",
-        projectId: "libcthorne-dev",
-        storageBucket: "libcthorne-dev.appspot.com",
-        messagingSenderId: "827451018314",
-        appId: "1:827451018314:web:39781f8737ac2390326ab3"
-      };
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
 
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const db = getFirestore(app);
-
-      window.sendContactEmail = async (email, message) => {
-        try {
-          const timestamp = (new Date()).getTime();
-          const docRef = doc(db, "contact", `${email}_${timestamp}`);
-          await setDoc(
-            docRef,
-            {
-              email,
-              message
-            }
-          );
-          console.log("Document written with ID: ", docRef.id);
-          return true;
-        } catch (e) {
-          console.error("Error adding document: ", e);
-          return false;
+        window.sendContactEmail = async (email, message) => {
+          try {
+            const timestamp = (new Date()).getTime();
+            const docRef = doc(db, "contact", `${email}_${timestamp}`);
+            await setDoc(
+              docRef,
+              {
+                email,
+                message
+              }
+            );
+            console.log("Document written with ID: ", docRef.id);
+            return true;
+          } catch (e) {
+            console.error("Error adding document: ", e);
+            return false;
+          }
         }
-      }
 
-      window.analytics = analytics;
-      window.logEvent = logEvent;
+        window.analytics = analytics;
+        window.logEvent = logEvent;
 
-      logEvent(analytics, 'page_visited');
-    </script>
-  </body>
-</html>
+        logEvent(analytics, 'page_visited');
+      </script>
+    </body>
+  </html>
