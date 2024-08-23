@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>Services de traduction financière - BabelBond</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+    <meta name="description" content="Traductions financières de hautes qualités" />
+    <meta property="og:title" content="BabelBond" />
+    <meta property="og:url" content="https://babelbond.com" />
+    <meta property="og:description" content="Traductions financières de hautes qualités" />
+    <meta property="og:image" content="https://babelbond.com/img/logo-white-purple-background.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+      .roboto-light, h1, h4, h5, p, li {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .roboto-bold {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      #logoMobile {
+        width: 100%;
+        max-width: 250px;
+      }
+
+      #logoDesktop {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      #openMenuIcon {
+        max-height: 35px;
+        max-width: 35px;
+      }
+
+      #closeMenuIcon {
+        max-height: 35px;
+        max-width: 35px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      /* Larger font for longer phones */
+      @media only screen
+        and (max-width: 576px)
+        and (min-height: 900px) {
+          h1 {
+            font-size: 40px;
+          }
+      }
+
+      @media (min-width: 576px) {
+          h1 {
+            font-size: 40px;
+          }
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+
+      h3 {
+        font-size: 32px; 
+      }
+
+      h4 {
+        font-size: 26px;
+      }
+
+      h5 {
+        font-size: 20px;
+      }
+
+      .text-small {
+        font-size: 12px;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .divider-mobile {
+        max-width: 100%;
+      }
+
+      .divider-desktop {
+        max-width: 30%;
+      }
+
+      .fade-in {
+        animation: fadeIn 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      .fade-out {
+        animation: fadeOut 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+
+      #header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 100px;
+      }
+
+      #main {
+        min-height: calc(100svh - 100px);
+      }
+
+      #menu {
+        z-index: 1;
+        min-height: calc(100svh - 100px);
+        background-color: #FFFFFF;
+      }
+
+      .menu-chevron {
+        width: 35px;
+      }
+
+      .menu-language {
+        width: 60px;
+      }
+
+      #footerContainer {
+        background-color: #000;
+      }
+
+      .linkedin-footer-icon {
+        width: 35px;
+        mix-blend-mode: difference;
+        border-radius: 4px;
+      }
+
+      .footer-text {
+        color: #fff;
+        font-size: 12px;
+      }
+
+      h5 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    </style>
+
+    <script>
+      function openMenu() {
+        const menu = document.getElementById("menu");
+        if (menu.dataset.open === "true" || menu.dataset.midAnimation === "true") {
+          return false;
+        }
+
+        window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+
+        menu.dataset.open = "true";
+        menu.dataset.midAnimation = "true";
+        menu.classList.remove('d-none', 'fade-out');
+        menu.classList.add('fade-in');
+
+        const openMenuButton = document.getElementById("openMenuButton");
+        openMenuButton.classList.add('d-none');
+
+        const closeMenuButton = document.getElementById("closeMenuButton");
+        closeMenuButton.classList.remove('d-none');
+
+        const allSections = Array.from(document.querySelectorAll("#sections > div"));
+        const allSectionsExceptHero = allSections.slice(1);
+        for (const section of allSectionsExceptHero) {
+          section.classList.add('d-none');
+        }
+
+        setTimeout(() => {
+          const heroSection = document.querySelector("#sections > div:first-of-type");
+          heroSection.classList.add('d-none');
+          menu.dataset.midAnimation = "false";
+        }, 500);
+
+        return true;
+      }
+
+      function closeMenu() {
+        const menu = document.getElementById("menu");
+        if (menu.dataset.open === "false" || menu.dataset.midAnimation === "true") {
+          return false;
+        }
+
+        window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+
+        menu.dataset.open = "false";
+        menu.dataset.midAnimation = "true";
+        menu.classList.remove('fade-in');
+        menu.classList.add('fade-out');
+
+        const closeMenuButton = document.getElementById("closeMenuButton");
+        closeMenuButton.classList.add('d-none');
+
+        const openMenuButton = document.getElementById("openMenuButton");
+        openMenuButton.classList.remove('d-none');
+
+        const allSections = document.querySelectorAll("#sections > div");
+        for (const section of allSections) {
+          section.classList.remove('d-none');
+        }
+
+        setTimeout(() => {
+          menu.classList.add('d-none');
+          menu.dataset.midAnimation = "false";
+        }, 500);
+
+        return true;
+      }
+
+      function openAboutSection() {
+        document.location.href = "/fr";
+      }
+
+      function openServicesSection() {
+        document.location.href = "/fr#services";
+      }
+
+      function openOurEdgeSection() {
+        document.location.href = "/fr#ourEdge";
+      }
+
+      function openContactSection() {
+        document.location.href = "/fr#contact";
+      }
+   </script>
+
+    <body>
+      <div id="header">
+        <!-- Desktop -->
+        <div class="d-none d-lg-block roboto-light" style="position: absolute; top: 10px; right: 10px; font-size: 10pt">
+          <a href="/privacy">EN</a>
+          <span> / </span>
+          <a href="/fr/privacy" class="roboto-medium">FR</a>
+        </div>
+
+        <div class="container">
+          <!-- Mobile -->
+          <div class="d-lg-none row">
+            <div class="col-9">
+              <div class="d-flex h-100 align-items-center justify-content-start">
+                <a role="button" href="../">
+                  <img id="logoMobile" src="/img/logo-with-black-text.png" alt="BabelBond" />
+                </a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="position-relative d-flex h-100 align-items-center justify-content-end" style="padding-bottom: 4px">
+                <div id="openMenuButton" role="button" class="position-absolute" onclick="openMenu()">
+                  <img id="openMenuIcon" src="/img/hamburger.png" alt="Open menu" />
+                </div>
+
+                <div id="closeMenuButton" role="button" class="position-absolute d-none" onclick="closeMenu()">
+                  <img id="closeMenuIcon" src="/img/exit.png" alt="Close menu" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop -->
+          <div class="d-none d-lg-flex row px-lg-5">
+            <div class="col-5">
+              <div class="d-flex h-100 align-items-center justify-content-start">
+                <a role="button" href="../">
+                  <img id="logoDesktop" src="/img/logo-with-black-text.png" alt="BabelBond" />
+                </a>
+              </div>
+            </div>
+            <div class="col-6 offset-1 col-xxl-4 offset-xxl-2">
+              <div class="row text-nowrap h-100 align-items-center user-select-none">
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openAboutSection()">À propos</h5>
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openServicesSection()">Services</h5>
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openOurEdgeSection()">Promesse</h5>
+                <h5 class="roboto-bold col-3 text-center px-2" role="button" onclick="openContactSection()">Contact</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main" class="position-relative">
+        <!-- Hamburger menu -->
+        <div id="menu" class="position-absolute top-0 w-100 d-none align-items-center">
+          <div id="menuItems">
+            <div class="container">
+              <div class="ps-2 my-3">
+                <div class="position-relative" role="button" onclick="openAboutSection()">
+                  <p class="roboto-regular pt-3 pb-3">À propos</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative" role="button" onclick="openServicesSection()">
+                  <p class="roboto-regular pt-3 pb-3">Services</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative" role="button" onclick="openOurEdgeSection()">
+                  <p class="roboto-regular pt-3 pb-3">Promesse</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative" role="button" onclick="openContactSection()">
+                  <p class="roboto-regular pt-3 pb-3">Contact</p>
+                  <img class="menu-chevron pt-3 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+                </div>
+                <div class="position-relative">
+                  <p class="roboto-regular pt-3 pb-3">Language</p>
+                  <div class="menu-language pt-3 top-0 end-0 position-absolute roboto-light">
+                    <a href="/privacy">EN</a>
+                    <span> / </span>
+                    <a href="/fr/privacy" class="roboto-medium">FR</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="menuFooter" class="d-md-none position-absolute bottom-0 text-center px-4 w-100">
+            <a href="https://www.linkedin.com/company/babelbond/">
+              <img src="/img/linkedin-black-box.png" alt="LinkedIn" style="width: 30px; border-radius: 4px" />
+            </a>
+            <p class="text-small roboto-regular pt-2">BabelBond Limited est une société enregistrée en Angleterre et au Pays de Galles sous le numéro 15395988. Copyright © 2024 BabelBond, Ltd. Tous droits réservés.</p>
+          </div>
+        </div>
+
+        <div id="sections" class="position-absolute top-0 w-100">
+          <div id="privacyPolicy">
+            <div class="container">
+              <div class="row px-lg-5 my-2 my-lg-4">
+                <h1 class="mb-4 mb-lg-4">Privacy Policy</h1>
+
+                <h4>1. Introduction</h4>
+                <h5>1.1. Informations importantes – Présentation</h5>
+                <p>Bienvenue dans la Politique de confidentialité et de protection des données de Babelbond Ltd (la « Politique de confidentialité »).</p>
+                <p>Chez Babelbond Ltd (« nous »), nous nous engageons à protéger et à respecter votre vie privée et vos Données à caractère personnel conformément au règlement général sur la protection des données du Royaume-Uni (le « RGPD britannique »), à la loi de 2018 sur la protection des données et à toutes autres lois et tous autres règlements en vigueur au Royaume-Uni.</p>
+                <p>La présente Politique de confidentialité indique comment nous collectons, traitons et protégeons vos données. Elle vous informe sur vos droits au respect de la vie privée et sur la manière dont la loi vous protège. En outre, elle présente à nos collaborateurs et aux membres de notre personnel les obligations et protocoles qu’ils doivent respecter lorsqu’ils traitent des données.</p>
+                <p>Il nous est possible de collecter et d’utiliser des données auprès :</p>
+                <div>
+                  <ul>
+                    <li>de clients ;</li>
+                    <li>de fournisseurs ;</li>
+                    <li>de collaborateurs ou de membres de notre personnel ;</li>
+                  </ul>
+                </div>
+                <p>ainsi qu’auprès de toute autre personne avec laquelle notre organisation est en relation ou qu’elle est amenée à contacter.</p>
+                <p>La présente Politique de confidentialité s’applique à l’ensemble de nos collaborateurs et des membres de notre personnel. Elle concerne toutes les Données à caractère personnel que nous traitons à un moment quelconque.</p>
+
+                <h5>1.2. Votre Responsable du traitement</h5>
+                <p>Babelbond Ltd est votre Responsable du traitement. Elle est responsable de vos Données à caractère personnel. Toute demande d’information concernant vos données doit nous être adressée par courrier électronique à data@babelbond.com ou par courrier à l’adresse suivante : 1 Warrington Crescent, Londres, W9 1ED (Royaume-Uni).</p>
+                <p>Vous avez la possibilité d’introduire une réclamation à un moment quelconque auprès du bureau du commissaire à l’information (Information Commissioner’s Office, ICO), l’autorité de contrôle britannique pour les questions de protection des données (www.ico.org.uk). Nous aimerions toutefois pouvoir répondre à vos préoccupations avant que vous ne les portiez à la connaissance de l’ICO. Ainsi, nous vous invitons à nous en faire part en premier lieu.</p>
+
+                <h5>1.3. Traitement de données pour le compte d’un Responsable du traitement – Responsabilité des sous-traitants à votre égard</h5>
+                <p>Dans le cadre de nos responsabilités en tant que Responsable du traitement, certains de nos collaborateurs (les « Sous-traitants ») traiteront vos données pour notre compte. Les responsabilités ci-dessous peuvent être attribuées à une personne physique ou s’appliquer à l’ensemble de notre organisation. Le Responsable du traitement et nos Sous-traitants doivent :</p>
+                <div>
+                  <ul>
+                    <li>veiller à ce que tout traitement de Données à caractère personnel repose sur l’une des bases juridiques énoncées par le RGPD britannique (veuillez vous référer à la section 2.2 ci-dessous pour plus d’informations) ;</li>
+                    <li>veiller à ce que les Sous-traitants habilités à traiter des Données à caractère personnel se soient engagés à respecter la confidentialité ou soient soumis à une obligation légale appropriée de confidentialité ;</li>
+                    <li>prendre des mesures techniques et organisationnelles destinées à assurer un niveau de sécurité adapté aux risques auxquels les Données à caractère personnel sont exposées ;</li>
+                    <li>obtenir une autorisation préalable, spécifique ou générale, avant de faire appel à un autre Sous-traitant ;</li>
+                    <li>aider le Responsable du traitement à remplir son obligation de répondre aux demandes d’exercice des droits des personnes concernées ;</li>
+                    <li>mettre à la disposition du Responsable du traitement l’ensemble des informations nécessaires pour démontrer le respect des obligations prévues par le RGPD britannique, et autoriser les contrôles (y compris les inspections) réalisés par le Responsable du traitement ou par un autre contrôleur mandaté par celui-ci, et y contribuer ;</li>
+                    <li>tenir un registre de toutes les catégories d’activités de traitement effectuées pour le compte d’un Responsable du traitement ;</li>
+                    <li>coopérer, sur demande, avec l’autorité de contrôle dans le cadre de l’exécution de ses tâches ;</li>
+                    <li>veiller à ce que toute personne agissant sous l’autorité du Sous-traitant et ayant accès aux Données à caractère personnel ne les traite que sur instruction du Responsable du traitement ; et</li>
+                    <li>aviser le Responsable du traitement dans les meilleurs délais de toute violation de Données à caractère personnel dont ils auraient connaissance.</li>
+                  </ul>
+                </div>
+                
+                <h4>2. Base juridique de la collecte des données</h4>
+                <h5>2.1. Types de données – Champ d’application de la présente Politique de confidentialité</h5>
+                <p>L’expression « Données à caractère personnel » désigne toutes les informations concernant une personne physique et grâce auxquelles cette dernière peut être identifiée. Les données ne permettant pas d’identifier la personne qu’elles concernent ne sont pas considérées comme des Données à caractère personnel (données anonymes).</p>
+                <p>Nous pouvons collecter, utiliser, stocker et transférer différents types de Données à caractère personnel vous concernant, que nous avons regroupés ci-après. Tous les types de données suivants ne seront pas nécessairement collectés auprès de vous. Il s’agit de l’ensemble des données que nous collectons et du moment où nous les collectons auprès de vous :</p>
+                <div>
+                  <ul>
+                    <li><strong>Profil – Données d’identité :</strong> il s’agit de données relatives à votre prénom, votre nom, votre sexe et votre date de naissance.</li>
+                    <li><strong>Données de contact :</strong> il s’agit de données relatives à votre numéro de téléphone, votre adresse et votre adresse électronique.</li>
+                    <li><strong>Données de facturation :</strong> il s’agit d’informations relatives à vos cartes de débit et de crédit (nom associé à vos données de paiement, adresse de facturation, etc.).</li>
+                    <li><strong>Données financières :</strong> il s’agit de vos coordonnées bancaires (numéro de compte, code guichet, etc.).</li>
+                    <li><strong>Données relatives aux opérations :</strong> il s’agit d’informations sur le détail et les enregistrements de l’ensemble des paiements que vous avez effectués pour bénéficier de nos services ou de nos produits.</li>
+                    <li><strong>Données techniques :</strong> il s’agit de votre adresse IP, du type et de la version de votre navigateur, du réglage de votre fuseau horaire et de votre localisation, de votre système d’exploitation et de votre plateforme, ainsi que des autres technologies des appareils que vous utilisez pour échanger avec nous.</li>
+                    <li><strong>Données relatives au support client :</strong> il s’agit notamment des commentaires et des réponses aux sondages.</li>
+                    <li><strong>Données d’utilisation :</strong> il s’agit d’informations sur la manière dont vous utilisez notre site internet, nos produits et nos services.</li>
+                  </ul>
+                </div>
+                <p>Nous ne collectons aucune catégorie particulière de Données à caractère personnel vous concernant (notamment des informations sur votre origine raciale ou ethnique, vos croyances religieuses ou philosophiques, votre vie sexuelle, votre orientation sexuelle, vos opinions politiques, votre appartenance à un syndicat, votre santé et des données génétiques et biométriques). Nous ne collectons pas non plus d’informations relatives à d’éventuelles condamnations pénales ou infractions.</p>
+
+                <h5>2.2. Base juridique de la collecte de ces données</h5>
+                <p>Le RGPD britannique énonce diverses raisons valables qui autorisent la collecte et le traitement des Données à caractère personnel. Les principales raisons pour lesquelles nous les collectons sont les suivantes :</p>
+                <div>
+                  <ul>
+                    <li><strong>Le consentement :</strong> certaines situations nous permettent de collecter vos Données à caractère personnel (par exemple, lorsque vous cochez une case confirmant que vous acceptez de recevoir nos lettres d’information par courrier électronique ou que vous acceptez de bénéficier d’un service).</li>
+                    <li><strong>Nos obligations contractuelles :</strong> nous sommes susceptibles de vous demander certaines informations afin de respecter nos obligations contractuelles et de vous fournir le service convenu.</li>
+                    <li><strong>La conformité juridique :</strong> la loi nous oblige à collecter et à traiter certains types de données, telles que celles relatives à des activités frauduleuses ou à d’autres actes illicites.</li>
+                    <li><strong>Nos intérêts légitimes :</strong> il se peut que nous devions collecter certaines informations auprès de vous aux fins de nos intérêts légitimes. Cela comprend les aspects auxquels l’on peut raisonnablement s’attendre dans le cadre de la gestion de notre activité, qui n’auront aucune incidence significative sur vos droits, votre liberté ou vos intérêts. Il s’agit notamment de votre adresse, pour que nous sachions où effectuer une livraison, ou de votre nom, pour que nous sachions qui contacter à l’avenir.</li>
+                  </ul>
+                </div>
+
+                <h4>3. Comment utilisons-nous vos données à caractère personnel ?</h4>
+                <h5>3.1. Notre utilisation des données</h5>
+                <p>Nous n’utiliserons vos Données à caractère personnel que lorsque la loi nous y autorisera.</p>
+
+                <h5>3.2. Changement de finalité</h5>
+                <p>Nous n’utiliserons vos Données à caractère personnel qu’aux fins pour lesquelles nous les avons collectées, à moins que nous ne considérions raisonnablement que nous devons les utiliser pour une autre raison et que celle-ci est compatible avec la finalité initiale. Veuillez nous contacter si vous souhaitez que nous vous expliquions en quoi la nouvelle finalité du traitement est compatible avec la finalité initiale.</p>
+                <p>Si nous devons utiliser vos Données à caractère personnel à d’autres fins, nous vous en informerons et vous préciserons la base juridique qui nous permet de le faire.</p>
+                <p>Veuillez noter qu’il est possible que nous traitions vos Données à caractère personnel à votre insu ou sans votre consentement, conformément aux principes susmentionnés, lorsque la loi l’exige ou le permet.</p>
+
+                <h4>4. Vos droits – comment vous protégeons-nous ?</h4>
+                <h5>4.1. Vos droits</h5>
+                <p>Dans certaines circonstances, les lois relatives à la protection des données vous confèrent les droits suivants concernant vos Données à caractère personnel :</p>
+                <div>
+                  <ul>
+                    <li><strong>Droit d’être informé(e).</strong> Vous avez le droit d’être informé(e) des raisons pour lesquelles nous traitons vos Données à caractère personnel, de la durée de leur conservation et des personnes avec lesquelles elles seront partagées. Ces informations vous sont présentées dans le cadre de la présente politique.</li>
+                    <li><strong>Droit d’accès.</strong> Ce droit vous permet de recevoir une copie des Données à caractère personnel que nous détenons vous concernant et de vérifier si nous les traitons de manière licite (ce droit étant aussi appelé une « demande d’accès de la personne concernée »). Veuillez consulter la section 4.4 ci-après pour plus d’informations sur la façon dont vous pouvez présenter une demande d’accès de la personne concernée.</li>
+                    <li><strong>Droit de rectification.</strong> Vous avez le droit de demander la rectification des Données à caractère personnel que nous détenons vous concernant. Ce droit vous permet de faire rectifier des données incomplètes ou inexactes que nous détenons vous concernant ; nous pourrions cependant avoir besoin de vérifier l’exactitude des nouvelles données que vous nous communiquerez.</li>
+                    <li><strong>Droit à l’effacement.</strong> Vous avez le droit de nous demander d’effacer ou de supprimer vos Données à caractère personnel lorsqu’il n’existe plus de raison valable pour que nous continuions à les traiter, si vous avez dûment exercé votre droit d’opposition au traitement (voir ci-après), s’il se peut que nous ayons traité vos Données à caractère personnel de manière illicite ou si nous sommes tenus de les effacer afin de respecter la législation locale. Veuillez néanmoins noter que nous sommes susceptibles, dans certains cas, de ne pas pouvoir satisfaire votre demande d’effacement pour des motifs juridiques spécifiques qui vous seront précisés, le cas échéant, au moment de votre demande.</li>
+                    <li>
+                      <strong>Droit d’opposition.</strong> Vous pouvez vous opposer au traitement des Données à caractère personnel que nous détenons vous concernant. Ce droit vous permet d’interrompre ou d’empêcher le traitement de vos Données à caractère personnel. Veuillez noter qu’il ne s’agit pas d’un droit absolu et qu’il ne s’applique que dans certaines circonstances, par exemple :
+                      <ul>
+                        <li>(i) lorsque nous traitons vos Données à caractère personnel à des fins de marketing direct ;</li>
+                        <li>(ii) lorsque nous nous fondons sur notre intérêt légitime, ou sur celui d’un tiers, et que vous souhaitez vous opposer au traitement car votre situation est particulière et que vous estimez qu’il porte atteinte à vos droits et vos libertés fondamentaux ;</li>
+                        <li>(iii) dans certains cas, il se peut que nous continuions à traiter vos données si nous sommes en mesure de démontrer que ce traitement repose sur un motif légitime impérieux qui prévaut sur vos droits et vos libertés.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <strong>Droit de limiter le traitement.</strong> You have the right to request the restriction or suppression of their personal data. Note that this is not an absolute right and it only applies in certain circumstances:
+                      <ul>
+                        <li>(i) vous souhaitez que nous confirmions l’exactitude de vos données ;</li>
+                        <li>(ii) notre utilisation de vos données est illicite mais que vous ne souhaitez pas que nous les effacions ;</li>
+                        <li>(iii) vous souhaitez que nous conservions ces données même si nous n’en avons plus besoin car elles vous sont nécessaires pour constater, exercer ou défendre vos droits en justice ;</li>
+                        <li>(iv) vous vous êtes opposé(e) à notre utilisation de vos données mais nous avons besoin de vérifier si nous avons des motifs légitimes impérieux pour les utiliser.</li>
+                      </ul>
+                    </li>
+                    <li><strong>Droit à la portabilité des données.</strong> You have the right to request the transfer of your personal data to you or to a third party. If you make such a request, we will provide to you, or a third party you have chosen, your personal data in a structured, commonly used, machine-readable format. Note that this right only applies to automated information which you initially provided consent for us to use or where we used the information to perform a contract with you.</li>
+                  </ul>
+                  <p>Si vous souhaitez formuler une demande au titre de l’un de ces droits, veuillez nous contacter à l’adresse suivante : data@babelbond.com.</p>
+                </div>
+
+                <h5>4.2. Comment Babelbond Ltd protège-t-elle les Données à caractère personnel de ses clients ?</h5>
+                <p>Nous sommes soucieux d’assurer la sécurité de vos données et de les protéger contre toute divulgation indue.  Nous mettons en œuvre diverses mesures de sécurité pour garantir la sécurité de vos Données à caractère personnel au sein de nos systèmes, y compris la mise en application d’un protocole sécurisé et le cryptage de nos bases de données. Les Données à caractère personnel que nous collectons ne sont accessibles qu’à un nombre limité de collaborateurs, qui disposent de droits d’accès spéciaux à ces systèmes et qui sont soumis à une obligation de confidentialité. Si nous faisons appel à des sous-traitants pour stocker vos Données à caractère personnel, nous ne renoncerons pas à leur contrôle ni ne les exposerons à des risques de sécurité qui n’auraient pas été encourus si elles étaient restées en notre possession. Toutefois, il n’existe aucune garantie que la transmission de données sur internet soit entièrement sécurisée. Il est possible que des tiers non contrôlés par Babelbond Ltd interceptent des transmissions ou des communications privées ou qu’ils y accèdent de manière illégale. Bien que nous nous efforcions de les protéger, nous ne pouvons pas assurer ou garantir la sécurité des Données à caractère personnel que vous nous transmettez. Toute transmission de cette nature est à vos propres risques. Veuillez nous contacter si vous avez des raisons de croire que vos échanges avec nous ne sont plus sécurisés.</p>
+
+                <h5>4.3. Comment demander vos données et les obtenir ?</h5>
+                <p>Aucun frais ne vous sera demandé pour accéder à vos Données à caractère personnel (ou pour exercer l’un de vos autres droits). Toutefois, nous pourrions refuser de satisfaire votre demande si elle était manifestement infondée.</p>
+                <p>Nous pouvons être amenés à vous demander des informations spécifiques pour que nous puissions confirmer votre identité et nous assurer que vous avez le droit d’accéder à vos Données à caractère personnel (ou d’exercer l’un de vos autres droits). Il s’agit d’une mesure de sécurité visant à garantir que des Données à caractère personnel ne sont pas divulguées à une personne qui n’aurait pas le droit de les recevoir. Nous pouvons également vous contacter pour vous demander des informations complémentaires concernant votre demande afin d’y répondre plus rapidement.</p>
+
+                <h4>5. Vos données et les tiers</h4>
+                <h5>5.1. Partage de vos données avec des tiers</h5>
+                <p>Nous pouvons partager des Données à caractère non personnel avec des tiers. Nous pouvons partager vos Données à caractère personnel avec des sous-traitants ou des affiliées, soumis à des obligations de confidentialité afin qu’ils ne les utilisent qu’aux fins pour lesquelles nous les leur avons communiquées et conformément à nos instructions.</p>
+                <p>Nous pouvons également partager des Données à caractère personnel avec des parties intéressées si Babelbond Ltd envisage un changement de contrôle ou l’acquisition de tout ou partie de notre activité ou de nos actifs, ou en lien avec l’octroi de licences relatives à notre technologie.</p>
+                <p>Si Babelbond Ltd est cédée ou réalise une cession ou un transfert, nous pouvons, à notre entière discrétion, transférer, vendre ou céder vos Données à caractère personnel à un tiers dans le cadre de l’opération considérée ou en relation avec celle-ci. Lors d’un tel transfert, la Politique de confidentialité de l’entité acquéreuse peut régir l’utilisation ultérieure de vos Données à caractère personnel. Dans tous les autres cas, vos données resteront protégées conformément à la présente Politique de confidentialité (telle que ponctuellement modifiée).</p>
+                <p>Nous pouvons partager vos Données à caractère personnel à un moment quelconque si des raisons juridiques le justifient ou pour imposer le respect de nos conditions ou de la présente Politique de confidentialité.</p>
+
+                <h4>6. Combien de temps conservons-nous vos données ?</h4>
+                <p>Nous ne conserverons vos Données à caractère personnel que durant la période raisonnablement nécessaire pour accomplir les finalités en vue desquelles elles auront été collectées. Nous pouvons conserver vos Données à caractère personnel pendant une période plus longue que d’ordinaire en cas de plainte, ou si nous estimons de manière raisonnable qu’un différend pourrait survenir dans le cadre de notre relation avec vous.</p>
+
+                <h4>7. Limite d’âge</h4>
+                <p>Vous ne devez pas utiliser Babelbond Ltd si vous n’êtes pas âgé(e) d’au moins 16 ans. Si vous avez moins de 16 ans et que vous accédez à Babelbond Ltd en mentant sur votre âge, vous devez immédiatement cesser d’utiliser Babelbond Ltd.</p>
+                <p>Ce site internet n’est pas destiné aux enfants et nous ne collectons pas sciemment de données relatives à des enfants.</p>
+
+                <h4>8. Transfert international de données</h4>
+                <p>Lorsque vos données sont transférées à l’étranger, nous sommes tenus de veiller à ce que vous bénéficiez d’une protection de vos Données à caractère personnel équivalente à celle assurée au Royaume-Uni.</p>
+                <p>Nous mettrons généralement en œuvre des garanties appropriées lors des transferts internationaux, par exemple en utilisant des clauses contractuelles spécifiques qui ont été approuvées par la Commission européenne et/ou le gouvernement britannique, ainsi que des mesures complémentaires si nous le jugeons nécessaire compte tenu des circonstances (engagements contractuels supplémentaires, sécurité renforcée, etc.).</p>
+                <p>Nous nous tenons informés des évolutions de ce domaine du droit et mettrons en œuvre toutes les mesures nouvelles, différentes et/ou supplémentaires nécessaires dans le cadre de tels transferts.</p>
+
+                <h4>9. Modification de la présente politique de confidentialité</h4>
+                <p>Nous sommes susceptibles de modifier ou de mettre à jour de façon ponctuelle la présente Politique de confidentialité. Cela peut s’avérer nécessaire, par exemple si la loi évolue ou si nous modifions nos activités d’une manière qui affecte la protection des Données à caractère personnel.</p>
+                <p>Ces éventuelles modifications seront publiées dans la version la plus récente de ce document, qui est toujours accessible sur notre site internet.</p>
+
+                <h4>10. Interprétation</h4>
+                <p>Les occurrences de l’expression « y compris » signifient « y compris, notamment, » et les exemples cités ne sont pas destinés à limiter de quelque manière que ce soit le terme qu’ils servent à illustrer. Les éventuelles adresses électroniques indiquées dans la présente politique doivent être utilisées uniquement pour les fins spécifiées. Tout message non lié à ces fins sera ignoré. À moins que la loi n’exige qu’il en soit autrement, nous nous réservons le droit de ne pas répondre aux courriers électroniques, même s’ils concernent une question légitime pour laquelle une adresse électronique a été fournie. Vous êtes plus susceptible d’obtenir une réponse si votre demande ou votre question est polie et raisonnable, et s’il n’existe pas d’autre façon relativement évidente d’y trouver une réponse (en consultant nos foires aux questions ou d’autres sections de notre site internet, par exemple).</p>
+                <p>Les membres de notre personnel ne sont pas habilités à conclure des contrats au nom de Babelbond Ltd, à renoncer à des droits ou à formuler des déclarations (à caractère contractuel ou d’une autre nature). Si une déclaration contenue dans un courrier électronique provenant d’une adresse de Babelbond Ltd est en contradiction avec l’une des dispositions de la présente politique, nos conditions ou une annonce publique officielle figurant sur notre site internet, ou si elle est contraire aux droits de Babelbond Ltd ou équivaut à une renonciation à ceux-ci, le contenu du courrier électronique en question sera interprété de manière à leur donner priorité. La seule exception à cette règle concerne les communications officielles provenant du service juridique de Babelbond Ltd.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="footer">
+            <div id="footerContainer" class="d-none d-sm-block">
+              <div class="d-flex justify-content-center">
+                <div class="col-11 d-flex flex-column align-items-center text-center py-4">
+                  <a href="https://www.linkedin.com/company/babelbond/">
+                    <img class="linkedin-footer-icon row mb-3" src="/img/linkedin-white-box.png" />
+                  </a>
+                  <span class="footer-text roboto-regular">
+                    BabelBond Limited est une société enregistrée en Angleterre et au Pays de Galles sous le numéro 15395988. Copyright © 2024 BabelBond, Ltd. Tous droits réservés.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+      <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyB1nCM_CqnUo1Jv_9LwikPAZiRLoAg1u7o",
+          authDomain: "libcthorne-dev.firebaseapp.com",
+          projectId: "libcthorne-dev",
+          storageBucket: "libcthorne-dev.appspot.com",
+          messagingSenderId: "827451018314",
+          appId: "1:827451018314:web:39781f8737ac2390326ab3"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        window.analytics = analytics;
+        window.logEvent = logEvent;
+
+        logEvent(analytics, 'page_visited');
+      </script>
+    </body>
+  </html>
