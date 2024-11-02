@@ -9,10 +9,38 @@
     <atom:link href="https://babelbond.com/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
+      <link>https://babelbond.com/fr/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://babelbond.com/fr/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://babelbond.com/fr/clients/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://babelbond.com/fr/clients/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://babelbond.com/fr/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://babelbond.com/fr/contact/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
       <link>https://babelbond.com/fr/privacy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://babelbond.com/fr/privacy/</guid>
       <description>&lt;h4&gt;1. Introduction&lt;/h4&gt;&#xA;&lt;h5&gt;1.1. Informations importantes – Présentation&lt;/h5&gt;&#xA;&lt;p&gt;Bienvenue dans la Politique de confidentialité et de protection des données de Babelbond Ltd (la « Politique de confidentialité »).&lt;/p&gt;&#xA;&lt;p&gt;Chez Babelbond Ltd (« nous »), nous nous engageons à protéger et à respecter votre vie privée et vos Données à caractère personnel conformément au règlement général sur la protection des données du Royaume-Uni (le « RGPD britannique »), à la loi de 2018 sur la protection des données et à toutes autres lois et tous autres règlements en vigueur au Royaume-Uni.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://babelbond.com/fr/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://babelbond.com/fr/services/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>
