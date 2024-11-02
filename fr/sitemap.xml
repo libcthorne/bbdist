@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://babelbond.com/fr/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babelbond.com/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://babelbond.com/fr/contact/"
+                />
+  </url><url>
     <loc>https://babelbond.com/fr/privacy/</loc>
     <xhtml:link
                 rel="alternate"
@@ -24,30 +36,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://babelbond.com/fr/"
-                />
-  </url><url>
-    <loc>https://babelbond.com/fr/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babelbond.com/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://babelbond.com/fr/categories/"
-                />
-  </url><url>
-    <loc>https://babelbond.com/fr/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babelbond.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://babelbond.com/fr/tags/"
                 />
   </url>
 </urlset>
