@@ -1,0 +1,528 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  
+  <title>Clients - BabelBond</title>
+
+  <meta charset="utf-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+<meta name="description" content="High-quality financial translations" />
+<meta property="og:title" content="BabelBond" />
+<meta property="og:url" content="https://babelbond.com" />
+<meta property="og:description" content="High-quality financial translations" />
+<meta property="og:image" content="https://babelbond.com/img/logo-white-purple-background.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+      <link rel="stylesheet" href="/css/main.min.ad2d794b21bf44a5c56a0c91184a6ffb7a870fa1a6eca77d4bc17246e3b938d7.css" integrity="sha256-rS15SyG/RKXFagyRGEpv&#43;3qHD6Gm7Kd9S8FyRuO5ONc=" crossorigin="anonymous">
+
+
+      <script src="/js/main.61f2d53d0c7ba6cff101ab3c76f35b38cfad9b5be4d40cc0064484dcdefd42a8.js" integrity="sha256-YfLVPQx7ps/xAas8dvNbOM&#43;tm1vk1AzABkSE3N79Qqg=" crossorigin="anonymous"></script>
+
+
+  
+  <style>
+    .divider-desktop {
+      max-width: 100% !important;
+      width: 350px;
+    }
+
+    #clientsImage {
+      width: 250px;
+      height: 250px;
+    }
+
+    #clientsImageMobile {
+      width: 70%;
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    
+
+
+<div id="header">
+  <div class="container mw-100">
+    
+    <div class="d-lg-none row">
+      <div class="col-9">
+        <div class="d-flex h-100 align-items-center justify-content-start">
+          <a role="button" href="/">
+            <img id="logoMobile" src="/img/logo-with-black-text-transparent.png" alt="BabelBond" />
+          </a>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="position-relative d-flex h-100 align-items-center justify-content-end" style="padding-bottom: 4px">
+          <div id="openMenuButton" role="button" class="position-absolute" onclick="openMenu()">
+            <img id="openMenuIcon" src="/img/hamburger.png" alt="Open menu" />
+          </div>
+
+          <div id="closeMenuButton" role="button" class="position-absolute d-none" onclick="closeMenu()">
+            <img id="closeMenuIcon" src="/img/exit.png" alt="Close menu" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-lg-flex row">
+      <div class="col-6">
+        <div class="d-flex h-100 align-items-center justify-content-start">
+          <a role="button" href="/">
+            <img id="logoDesktop" src="/img/logo-with-black-text-transparent.png" alt="BabelBond" />
+          </a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="d-flex text-nowrap h-100 align-items-center user-select-none justify-content-end">
+          <a class="header-link d-flex justify-content-center mx-2" href="/"><h6 class="roboto-bold text-center px-2 my-0">Home</h6></a>
+          <a class="header-link d-flex justify-content-center mx-2" href="/about"><h6 class="roboto-bold text-center px-2 my-0">About</h6></a>
+          <a class="header-link d-flex justify-content-center mx-2" href="/services"><h6 class="roboto-bold text-center px-2 my-0">Services</h6></a>
+          <a class="selected header-link d-flex justify-content-center mx-2" href="/clients"><h6 class="roboto-bold text-center px-2 my-0">Clients</h6></a>
+          <a class="header-link d-flex justify-content-center mx-2 px-3 contact-header-button" href="/contact"><h6 class="roboto-bold text-center px-2 my-0">Contact</h6></a>
+
+          <span id="languages" class="d-flex ms-5 align-items-center" style="font-size: 10pt">
+            <img id="languageIcon" src="/img/language-selector.png" alt="Language selector" />
+            <span style="padding-left: 4px">
+              
+                
+                
+                <a class="roboto-medium"
+                  href="/clients/">
+                    EN
+                </a>
+                
+                <span> / </span>
+                
+              
+                
+                
+                <a class=""
+                  href="/fr/clients/">
+                    FR
+                </a>
+                
+              
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </header>
+  <main>
+    <div id="main" class="position-relative">
+      
+      <div id="menu" class="position-absolute top-0 w-100 d-none align-items-center">
+        <div id="menuItems">
+          <div class="container">
+            <div class="ps-2 my-3">
+              <a class="d-block position-relative" href="/">
+                <p class="roboto-regular pt-2 pb-2">Home</p>
+                <img class="menu-chevron pt-2 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+              </a>
+              <a class="d-block position-relative" href="/about">
+                <p class="roboto-regular pt-2 pb-2">About</p>
+                <img class="menu-chevron pt-2 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+              </a>
+              <a class="d-block position-relative" href="/services">
+                <p class="roboto-regular pt-2 pb-2">Services</p>
+                <img class="menu-chevron pt-2 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+              </a>
+              <a class="d-block position-relative" href="/clients">
+                <p class="roboto-regular pt-2 pb-2">Clients</p>
+                <img class="menu-chevron pt-2 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+              </a>
+              <a class="d-block position-relative" href="/contact">
+                <p class="roboto-regular pt-2 pb-2">Get in touch</p>
+                <img class="menu-chevron pt-2 top-0 end-0 position-absolute" src="/img/chevron-right.png" alt="Open section" />
+              </a>
+              <div class="position-relative">
+                <p class="roboto-regular pt-3 pb-3">Language</p>
+                <div class="menu-language pt-3 top-0 end-0 position-absolute roboto-light">
+                  
+                    
+                    
+                    <a class="roboto-medium"
+                      href="/clients/">
+                        EN
+                    </a>
+                    
+                    <span> / </span>
+                    
+                  
+                    
+                    
+                    <a class=""
+                      href="/fr/clients/">
+                        FR
+                    </a>
+                    
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="menuFooter" class="d-md-none position-absolute bottom-0 text-center px-4 w-100">
+          <a href="https://www.linkedin.com/company/babelbond/" target="_blank">
+            <img src="/img/linkedin-black-box.png" alt="LinkedIn" style="width: 30px; border-radius: 4px" />
+          </a>
+          <p class="text-small roboto-regular pt-2">BabelBond Limited is a company registered in England and Wales with company number 15395988. Copyright © 2025 BabelBond, Ltd. All Rights Reserved.</p>
+        </div>
+      </div>
+      <div id="sections" class="position-absolute top-0 w-100 h-100 d-flex flex-column">
+        <div id="mainSection">
+          
+  
+  <div>
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="row px-lg-5 my-2 my-lg-4 pt-2">
+        <h3 class="roboto-bold mb-4">Clients</h3>
+        <div class="position-relative overflow-hidden">
+          <div class="fadeInLeft w-100 h-100 position-absolute t-0" style="background-color: white"></div>
+          <img class="divider-mobile pb-4" style="max-width: 90%" src="/img/divider-mobile.png" alt="Content divider" />
+        </div>
+        <p>BabelBond specialises in language solutions for the finance and legal sectors, supporting industries from fintech and brokers to asset management and law. With a focus on accuracy, regulatory compliance, and cultural relevance, our tailored translations enable global client engagement, build trust, and fuel global growth.</p>
+        <div class="col-12 d-flex justify-content-center" style="z-index: 2; background-color: white;">
+          <img id="clientsImageMobile" class="fade-in-slow" src="/img/clients.png" />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container mt-5">
+      <div class="row px-lg-5 my-2 my-lg-4">
+        <div class="col-7">
+          <h1 class="roboto-bold mb-4">Clients</h1>
+          <div class="position-relative">
+            <div class="fadeInLeft w-100 h-100 position-absolute t-0" style="background-color: white;"></div>
+            <img class="divider-desktop pb-4" style="max-width: 30%" src="/img/divider-desktop.png" alt="Content divider" />
+          </div>
+          <p>BabelBond specialises in language solutions for the finance and legal sectors, supporting industries from fintech and brokers to asset management and law. With a focus on accuracy, regulatory compliance, and cultural relevance, our tailored translations enable global client engagement, build trust, and fuel global growth.</p>
+        </div>
+        <div class="col-5 d-flex align-items-center justify-content-center" style="z-index: 2; background-color: white;">
+          <img id="clientsImage" class="fade-in-slow" src="/img/clients.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="alternate-background py-3">
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="col-12 px-lg-5 my-2 my-lg-4">
+        <h4 class="roboto-light my-3 text-center">Who do we work with?</h4>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container">
+      <div class="row px-lg-5 my-3">
+        <h3 class="roboto-light my-3">Who do we work with?</h3>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="py-3">
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="row px-lg-5 my-4">
+        <h4 class="roboto-bold mb-4">Fintechs</h4>
+        <img class="divider-mobile pb-4" style="max-width: 90%" src="/img/divider-mobile.png" alt="Content divider" />
+        <p>Fintech leaders drive innovation, breaking traditional boundaries in finance. To capture global markets, your apps, software, and websites must resonate with diverse audiences. From regulatory demands to cultural expectations, we understand the unique pressures and opportunities in expanding your digital footprint.<br/><br/>BabelBond’s tailored solutions make your fintech products feel native to every user. Our services cover app and software localisation, UI adaptation, and multilingual SEO. We help you ensure compliance, increase user engagement, and unlock new markets—supporting growth and enhancing client trust.</p>
+        <div class="col-12 mt-3 d-flex justify-content-center">
+          <img style="width: 40%; border-radius: 10px;" src="/img/clients/fintechs.png" />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container">
+      <div class="row px-lg-5 my-2 my-lg-4 align-items-center">
+        <div class="col-3">
+          <img style="width: 90%; border-radius: 10px;" src="/img/clients/fintechs.png" />
+        </div>
+        <div class="col-9">
+          <h1 class="roboto-bold mb-4">Fintechs</h1>
+          <div class="position-relative">
+            <div class="fadeInLeft w-100 h-100 position-absolute t-0" style="background-color: white;"></div>
+            <img class="divider-desktop pb-4" style="max-width: 30%" src="/img/divider-desktop.png" alt="Content divider" />
+          </div>
+          <p>Fintech leaders drive innovation, breaking traditional boundaries in finance. To capture global markets, your apps, software, and websites must resonate with diverse audiences. From regulatory demands to cultural expectations, we understand the unique pressures and opportunities in expanding your digital footprint.<br/><br/>BabelBond’s tailored solutions make your fintech products feel native to every user. Our services cover app and software localisation, UI adaptation, and multilingual SEO. We help you ensure compliance, increase user engagement, and unlock new markets—supporting growth and enhancing client trust.</p>
+          <div class="d-flex flex-row pt-3 col-4">
+            <a href="/contact" class="w-100">
+              <div id="bookMeetingButton" class="d-flex justify-content-center align-items-center mb-2">
+                <h5 class="roboto-bold m-0 user-select-none">Learn more</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="alternate-background py-3">
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="row px-lg-5 my-4">
+        <h4 class="roboto-bold mb-4">Securities Brokers</h4>
+        <img class="divider-mobile pb-4" style="max-width: 90%" src="/img/divider-mobile.png" alt="Content divider" />
+        <p>As a securities broker, you cater to diverse investors in fast-paced markets. From regulatory filings to multilingual trading platforms, precise communication is essential for global engagement. We understand the complexities of maintaining clarity, compliance, and accessibility for all investor types.<br/><br/>BabelBond provides compliant translations for reports, platforms, and client communications, making your financial content accessible and engaging. With accurate, culturally adapted localisation, we help you connect confidently with institutional and retail investors worldwide.</p>
+        <div class="col-12 mt-3 d-flex justify-content-center">
+          <img style="width: 40%; border-radius: 10px;" src="/img/clients/securities.png" />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container">
+      <div class="row px-lg-5 my-2 my-lg-4 align-items-center">
+        <div class="col-9">
+          <h1 class="roboto-bold mb-4">Securities Brokers</h1>
+          <img class="divider-desktop pb-4" style="max-width: 30%" src="/img/divider-desktop.png" alt="Content divider" />
+          <p>As a securities broker, you cater to diverse investors in fast-paced markets. From regulatory filings to multilingual trading platforms, precise communication is essential for global engagement. We understand the complexities of maintaining clarity, compliance, and accessibility for all investor types.<br/><br/>BabelBond provides compliant translations for reports, platforms, and client communications, making your financial content accessible and engaging. With accurate, culturally adapted localisation, we help you connect confidently with institutional and retail investors worldwide.</p>
+          <div class="d-flex flex-row pt-3 col-4">
+            <a href="/contact" class="w-100">
+              <div id="bookMeetingButton" class="d-flex justify-content-center align-items-center mb-2">
+                <h5 class="roboto-bold m-0 user-select-none">Learn more</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-3 d-flex justify-content-end">
+          <img style="width: 90%; border-radius: 10px;" src="/img/clients/securities.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="py-3">
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="row px-lg-5 my-4">
+        <h4 class="roboto-bold mb-4">Real Estate</h4>
+        <img class="divider-mobile pb-4" style="max-width: 90%" src="/img/divider-mobile.png" alt="Content divider" />
+        <p>Real estate professionals know the importance of connecting with global investors and buyers. Whether promoting properties or negotiating cross-border sales, you need clear, compliant communication to drive deals and build trust. We understand your need to make complex information accessible and attractive.<br/><br/>BabelBond offers tailored localisation for property contracts, investment proposals, and marketing materials. Our expert translators ensure your content is legally compliant and culturally relevant, helping you attract international clients and expand your portfolio with confidence.</p>
+        <div class="col-12 mt-3 d-flex justify-content-center">
+          <img style="width: 40%; border-radius: 10px;" src="/img/clients/real_estate.png" />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container">
+      <div class="row px-lg-5 my-2 my-lg-4 align-items-center">
+        <div class="col-3">
+          <img style="width: 90%; border-radius: 10px;" src="/img/clients/real_estate.png" />
+        </div>
+        <div class="col-9">
+          <h1 class="roboto-bold mb-4">Real Estate</h1>
+          <img class="divider-desktop pb-4" style="max-width: 30%" src="/img/divider-desktop.png" alt="Content divider" />
+          <p>Real estate professionals know the importance of connecting with global investors and buyers. Whether promoting properties or negotiating cross-border sales, you need clear, compliant communication to drive deals and build trust. We understand your need to make complex information accessible and attractive.<br/><br/>BabelBond offers tailored localisation for property contracts, investment proposals, and marketing materials. Our expert translators ensure your content is legally compliant and culturally relevant, helping you attract international clients and expand your portfolio with confidence.</p>
+          <div class="d-flex flex-row pt-3 col-4">
+            <a href="/contact" class="w-100">
+              <div id="bookMeetingButton" class="d-flex justify-content-center align-items-center mb-2">
+                <h5 class="roboto-bold m-0 user-select-none">Learn more</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="alternate-background py-3">
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="row px-lg-5 my-4">
+        <h4 class="roboto-bold mb-4">Asset Managers</h4>
+        <img class="divider-mobile pb-4" style="max-width: 90%" src="/img/divider-mobile.png" alt="Content divider" />
+        <p>Asset managers guide both retail and institutional investors, providing access to diversified investment options across global markets. Clear, compliant communication with investors is key to maintaining trust and regulatory adherence. We understand the importance of making complex information accessible.<br/><br/>Our multilingual solutions cover marketing materials, due diligence documents, and performance reports. We help you build strong investor relationships through precise, compliant translations, ensuring your clients feel informed, valued, and ready to invest confidently across borders.</p>
+        <div class="col-12 mt-3 d-flex justify-content-center">
+          <img style="width: 40%; border-radius: 10px;" src="/img/clients/asset_managers.png" />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container">
+      <div class="row px-lg-5 my-2 my-lg-4 align-items-center">
+        <div class="col-9">
+          <h1 class="roboto-bold mb-4">Asset Managers</h1>
+          <img class="divider-desktop pb-4" style="max-width: 30%" src="/img/divider-desktop.png" alt="Content divider" />
+          <p>Asset managers guide both retail and institutional investors, providing access to diversified investment options across global markets. Clear, compliant communication with investors is key to maintaining trust and regulatory adherence. We understand the importance of making complex information accessible.<br/><br/>Our multilingual solutions cover marketing materials, due diligence documents, and performance reports. We help you build strong investor relationships through precise, compliant translations, ensuring your clients feel informed, valued, and ready to invest confidently across borders.</p>
+          <div class="d-flex flex-row pt-3 col-4">
+            <a href="/contact" class="w-100">
+              <div id="bookMeetingButton" class="d-flex justify-content-center align-items-center mb-2">
+                <h5 class="roboto-bold m-0 user-select-none">Learn more</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-3 d-flex justify-content-end">
+          <img style="width: 90%; border-radius: 10px;" src="/img/clients/asset_managers.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="py-3">
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="row px-lg-5 my-4">
+        <h4 class="roboto-bold mb-4">Wealth Managers</h4>
+        <img class="divider-mobile pb-4" style="max-width: 90%" src="/img/divider-mobile.png" alt="Content divider" />
+        <p>Wealth managers serve high-net-worth clients who demand transparency and tailored service. Your communication needs to be clear, compliant, and culturally adapted to maintain trust across global relationships. We know the value of clear information in sustaining client loyalty and meeting regulatory needs.<br/><br/>With expert translations for financial reports, estate plans, and client updates, BabelBond helps you deliver a seamless experience. Our multilingual services ensure your clients receive accurate, compliant information in their preferred language—strengthening trust and satisfaction.</p>
+        <div class="col-12 mt-3 d-flex justify-content-center">
+          <img style="width: 40%; border-radius: 10px;" src="/img/clients/wealth_management.png" />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container">
+      <div class="row px-lg-5 my-2 my-lg-4 align-items-center">
+        <div class="col-3">
+          <img style="width: 90%; border-radius: 10px;" src="/img/clients/wealth_management.png" />
+        </div>
+        <div class="col-9">
+          <h1 class="roboto-bold mb-4">Wealth Managers</h1>
+          <img class="divider-desktop pb-4" style="max-width: 30%" src="/img/divider-desktop.png" alt="Content divider" />
+          <p>Wealth managers serve high-net-worth clients who demand transparency and tailored service. Your communication needs to be clear, compliant, and culturally adapted to maintain trust across global relationships. We know the value of clear information in sustaining client loyalty and meeting regulatory needs.<br/><br/>With expert translations for financial reports, estate plans, and client updates, BabelBond helps you deliver a seamless experience. Our multilingual services ensure your clients receive accurate, compliant information in their preferred language—strengthening trust and satisfaction.</p>
+          <div class="d-flex flex-row pt-3 col-4">
+            <a href="/contact" class="w-100">
+              <div id="bookMeetingButton" class="d-flex justify-content-center align-items-center mb-2">
+                <h5 class="roboto-bold m-0 user-select-none">Learn more</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="alternate-background py-3">
+    
+    <div class="d-flex d-sm-none flex-grow-1 container">
+      <div class="row px-lg-5 my-4">
+        <h4 class="roboto-bold mb-4">Law Firms</h4>
+        <img class="divider-mobile pb-4" style="max-width: 90%" src="/img/divider-mobile.png" alt="Content divider" />
+        <p>In the legal sector, precision and compliance are paramount. Law firms must communicate complex ideas accurately across languages and legal systems, ensuring clients and partners understand every detail. We know the stakes of misinterpretation and the need for flawless legal communication.<br/><br/>BabelBond provides compliant translations for contracts, case files, and court documents, helping you manage cross-border cases with ease. Our expert linguists handle your sensitive materials with care, ensuring legal accuracy, compliance, and confidence across jurisdictions.</p>
+        <div class="col-12 mt-3 d-flex justify-content-center">
+          <img style="width: 40%; border-radius: 10px;" src="/img/clients/law_firms.png" />
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="d-none d-sm-block container">
+      <div class="row px-lg-5 my-2 my-lg-4 align-items-center">
+        <div class="col-9">
+          <h1 class="roboto-bold mb-4">Law Firms</h1>
+          <img class="divider-desktop pb-4" style="max-width: 30%" src="/img/divider-desktop.png" alt="Content divider" />
+          <p>In the legal sector, precision and compliance are paramount. Law firms must communicate complex ideas accurately across languages and legal systems, ensuring clients and partners understand every detail. We know the stakes of misinterpretation and the need for flawless legal communication.<br/><br/>BabelBond provides compliant translations for contracts, case files, and court documents, helping you manage cross-border cases with ease. Our expert linguists handle your sensitive materials with care, ensuring legal accuracy, compliance, and confidence across jurisdictions.</p>
+          <div class="d-flex flex-row pt-3 col-4">
+            <a href="/contact" class="w-100">
+              <div id="bookMeetingButton" class="d-flex justify-content-center align-items-center mb-2">
+                <h5 class="roboto-bold m-0 user-select-none">Learn more</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-3 d-flex justify-content-end">
+          <img style="width: 90%; border-radius: 10px;" src="/img/clients/law_firms.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+        <div id="footer">
+          <div id="footerContainer" class="d-none d-sm-block w-100 h-100">
+            <div class="d-flex justify-content-center">
+              <div class="col-11 d-flex flex-column align-items-center text-center py-3">
+                <a href="https://www.linkedin.com/company/babelbond/" target="_blank">
+                  <img class="linkedin-footer-icon row mb-3" src="/img/linkedin-white-box.png" />
+                </a>
+                <span class="footer-text roboto-regular">
+                  BabelBond Limited is a company registered in England and Wales with company number 15395988. Copyright © 2025 BabelBond, Ltd. All Rights Reserved.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+  import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+  import { doc, getFirestore, setDoc } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyB1nCM_CqnUo1Jv_9LwikPAZiRLoAg1u7o",
+    authDomain: "libcthorne-dev.firebaseapp.com",
+    projectId: "libcthorne-dev",
+    storageBucket: "libcthorne-dev.appspot.com",
+    messagingSenderId: "827451018314",
+    appId: "1:827451018314:web:39781f8737ac2390326ab3"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getFirestore(app);
+
+  window.sendContactEmail = async (email, message) => {
+    try {
+      const timestamp = (new Date()).getTime();
+      const docRef = doc(db, "contact", `${email}_${timestamp}`);
+      await setDoc(
+        docRef,
+        {
+          email,
+          message
+        }
+      );
+      console.log("Document written with ID: ", docRef.id);
+      return true;
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      return false;
+    }
+  }
+
+  window.analytics = analytics;
+  window.logEvent = logEvent;
+
+  logEvent(analytics, 'page_visited');
+</script>
+  </footer>
+</body>
+</html>

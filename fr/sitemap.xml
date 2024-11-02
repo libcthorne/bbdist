@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://babelbond.com/fr/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babelbond.com/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://babelbond.com/fr/about/"
+                />
+  </url><url>
+    <loc>https://babelbond.com/fr/clients/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babelbond.com/clients/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://babelbond.com/fr/clients/"
+                />
+  </url><url>
+    <loc>https://babelbond.com/fr/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babelbond.com/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://babelbond.com/fr/contact/"
+                />
+  </url><url>
     <loc>https://babelbond.com/fr/privacy/</loc>
     <xhtml:link
                 rel="alternate"
@@ -14,6 +50,18 @@
                 href="https://babelbond.com/fr/privacy/"
                 />
   </url><url>
+    <loc>https://babelbond.com/fr/services/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://babelbond.com/services/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://babelbond.com/fr/services/"
+                />
+  </url><url>
     <loc>https://babelbond.com/fr/</loc>
     <xhtml:link
                 rel="alternate"
@@ -24,30 +72,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://babelbond.com/fr/"
-                />
-  </url><url>
-    <loc>https://babelbond.com/fr/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babelbond.com/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://babelbond.com/fr/categories/"
-                />
-  </url><url>
-    <loc>https://babelbond.com/fr/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://babelbond.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://babelbond.com/fr/tags/"
                 />
   </url>
 </urlset>
